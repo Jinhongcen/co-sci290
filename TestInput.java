@@ -60,23 +60,25 @@ public class TestInput{
     System.out.println("YOU are "+ month + " months old OR " + days + "  days old OR " + hours + "  hours old");
     //double for user input is input.nextDouble();
     String job = " ";
-    Scanner 
+    String sex =" ";
+    int learn = 0;
+    System.out.println("Are you is boy or girl?");
+    sex = input.next();
+    if("boy".equals(sex))
+      System.out.println("you must are smart boy!");
+    else
+      System.out.println("Nice to meet you,pretty girl!");
+    System.out.println("what is you job now?");
+    job =input.next();
+    System.out.println(job+ " ,this is a great job");
+    System.out.println("How many hour you study a day?");
+    learn = input.nextInt();
+    if(learn<2)
+    System.out.println(learn + " hour!,i think,you should study hard a little.");
+    else
+      System.out.println(learn + " hour,you are good learner.");
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  }
+      
+     }
 }
