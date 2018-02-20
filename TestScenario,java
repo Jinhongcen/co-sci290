@@ -1,0 +1,7 @@
+public class TestScenario{
+    public static viod main(String[] args){
+    
+    int minimun = 1;
+    }
+
+}
