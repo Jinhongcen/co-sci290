@@ -51,7 +51,8 @@ public class GameDriver{
     String b=" ";
     b=input.next();
     if("yes".equals(b)){
-      System.out.println("Nice,I know you would choose the answer.OK ,let's start!");}
+      System.out.println("Nice,I know you would choose the answer.OK ,let's start!");
+    }
     
     else
     {
@@ -77,7 +78,7 @@ public class GameDriver{
     
       int younum = 0;
       System.out.println("Get one number you choose between 1 to 10. ");
-           younum = input.nextInt();
+          younum = input.nextInt();
       int mynum = 1 + (int)(Math.random()*(10-1));
       if(younum>=11){
         System.out.println("you choose a wrong number.choose again");
@@ -144,12 +145,7 @@ public class GameDriver{
     }
    
    
-      }
+         }
     
-    
-    
-  
-    
-  
-  }
+   }
 }
