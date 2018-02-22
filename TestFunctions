@@ -1,0 +1,16 @@
+/*
+   jinhong cen
+   CoSci 290
+   
+   Topics:
+     functions/methods - what all the different parts are
+     -access modifier
+     -return type
+     -function name 
+     -parameters (optional)
+*/
+public class TestFunctions{
+  public static void main(String[] args){
+  
+  }
+}
