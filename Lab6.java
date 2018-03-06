@@ -1,3 +1,7 @@
+/*
+ jinhong cen
+ co sci290
+*/
 import java.util.Scanner;
 public class Lab6{
   public static void main(String[] args){
