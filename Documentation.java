@@ -16,7 +16,7 @@ public class Documentation{
         return "guy";
         
       default:
-        System.out.println("default");
+        System.out.println("You not get anything!");
         return "wrong";
         
     }
@@ -46,11 +46,11 @@ public class Documentation{
     System.out.println("ok,now you should give me your lunck number!input a number 1-9!");
       int n;
     n = input.nextInt();
-    int mynum = 1 + (int)(Math.random()*(10-1));
-    if(n>mynum){
+    int mynum = 1 + (int)(Math.random()*(11-1));
+    if(n>mynum+1 && n<9){
      g = weapon(1);
     }
-    else if(n < mynum){
+    else if(n < mynum-1 && n <9){
      g = weapon(2);
     }
     else if(n == mynum){
@@ -62,13 +62,31 @@ public class Documentation{
     int m;
     m = monster(g);
     if(m == 20){
-      System.out.println("You just drop it " + m + "% " + "blood!" );
+      System.out.println("You just drop monster " + m + "% " + "blood!" );
+      System.out.println("Your luck is not very good ,try again next time!" );
     }
     else if(m == 50){
-      System.out.println("You  drop it " +m+ "% " + "blood! Come on" );
+      System.out.println("You  drop monster " +m+ "% " + "blood! Come on" );
+      System.out.println("You've killed half the blood, but unfortunately,it's not enough.");
+    }
+    else if(m == 100){
+    System.out.println("You just drop monster " + m + "% " + "blood! /n You save the world" );
     }
     else{
-    System.out.println("You just drop it " + m + "% " + "blood!You save the world" );
+         System.out.println(" _______  _______  __   __  _______    _______  __   __  _______  ______    __  \n"
+                     + "|       ||   _   ||  |_|  ||       |  |       ||  | |  ||       ||    _ |  |  | \n"
+                     + "|    ___||  |_|  ||       ||    ___|  |   _   ||  |_|  ||    ___||   | ||  |  | \n"
+                     + "|   | __ |       ||       ||   |___   |  | |  ||       ||   |___ |   |_||_ |  | \n"
+                     + "|   ||  ||       ||       ||    ___|  |  |_|  ||       ||    ___||    __  ||__| \n"
+                     + "|   |_| ||   _   || ||_|| ||   |___   |       | |     | |   |___ |   |  | | __  \n"
+                     + "|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_||__| \n"
+                     + "  ___    ____                                                                   \n" 
+                     + " |   |  |    |                                                                  \n" 
+                     + " |___| |    _|                                                                  \n" 
+                     + "  ___  |   |                                                                    \n" 
+                     + " |   | |   |                                                                    \n" 
+                     + " |___| |   |_                                                                   \n" 
+                     + "        |____|                                                                  \n");
     }
     }
   
