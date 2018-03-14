@@ -26,7 +26,7 @@ public  class SumDigits{
    System.out.println("Input you number,i will give the Sum the digits in an integer");
    long i = input.nextLong();
    Sum = sumDigits(i);
-   System.out.println("Number Sum = " + Sum);
+   System.out.println("The sum of the digits in an integer = " + Sum);
 }
 
 
