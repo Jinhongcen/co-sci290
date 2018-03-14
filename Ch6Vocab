@@ -1,0 +1,164 @@
+Actual parameter/argument/formal parameter/parameter:
+
+The variables defined in the method header are known as formal parameters or simply
+parameters. A parameter is like a placeholder: when a method is invoked, you pass a value
+to the parameter. This value is referred to as an actual parameter or argument. The parameter
+list refers to the method’s type, order, and number of the parameters. The method name
+and the parameter list together constitute the method signature. Parameters are optional; that
+is, a method may contain no parameters. For example, the Math.random() method has no
+parameters.
+
+
+Ambiguous invocation:
+
+Sometimes there are two or more possible matches for the invocation of a method, but
+the compiler cannot determine the best match. This is referred to as ambiguous invocation.
+Ambiguous invocation causes a compile error. 
+
+
+Divide conquer:
+
+The concept of method abstraction can be applied to the process of developing programs.
+When writing a large program, you can use the divide-and-conquer strategy, also known
+as stepwise refinement, to decompose it into subproblems. The subproblems can be further
+decomposed into smaller, more manageable problems.
+
+
+Information hiding
+
+Method abstraction is achieved by separating the use of a method from its implementation. The client can use a method without
+knowing how it is implemented. The details of the implementation are encapsulated in the
+method and hidden from the client who invokes the method. This is also known as information
+hiding or encapsulation. If you decide to change the implementation, the client program will
+not be affected, provided that you do not change the method signature. The implementation of
+the method is hidden from the client in a “black box,”
+
+
+
+Method:
+
+A method definition consists of its method name, parameters, return value type, and body.A
+The method header specifies the modifiers,return value type, method name, and parameters
+of the method. The static modifier is used for all the methods in this chapter. The reason for
+using it will be discussed in Chapter 8, Objects and Classes.
+A method may return a value. The returnValueType is the data type of the value the
+method returns. Some methods perform desired operations without returning a value. In this
+case, the returnValueType is the keyword void. For example, the returnValueType
+is void in the main method, as well as in System.exit, and System.out.println. If
+a method returns a value, it is called a value-returning method; otherwise it is called a void
+method.
+
+
+Method abstraction:
+
+Method abstraction is achieved by separating the use of a method from its implementation. The client can use a method without
+knowing how it is implemented.
+
+
+
+
+
+Method overloading:
+
+Overloading methods enables you to define the methods with the same name as long
+as their signatures are different.
+
+
+
+Method signature:
+ 
+The method name and the parameter list together constitute the method signature. 
+
+
+
+Modifier:
+
+The method header specifies the modifiers,return value type, method name, and parameters
+of the method. The static modifier is used for all the methods in this chapter.
+modifier
+public static 
+1,Access scope modifiers: public, protected, default (default), private
+2, static modifiers : static
+3, the final modifier :final
+4, abstract modifier :abstract   and so on.
+
+
+Pass by value:
+
+When you invoke a method with an argument, the value of the argument is passed to the
+parameter. This is referred to as pass-by-value. If the argument is a variable rather than a
+literal value, the value of the variable is passed to the parameter. The variable is not affected,
+regardless of the changes made to the parameter inside the method. 
+
+
+
+Scope of a variable:
+
+The scope of a variable is the part of the program where the variable can be
+referenced.
+ A variable defined inside a method is referred to as a local variable. The
+scope of a local variable starts from its declaration and continues to the end of the block
+that contains the variable. A local variable must be declared and assigned a value before
+it can be used.
+A parameter is actually a local variable. The scope of a method parameter covers the
+entire method. A variable declared in the initial-action part of a for-loop header has its
+scope in the entire loop. However, a variable declared inside a for-loop body has its scope
+limited in the loop body from its declaration to the end of the block that contains the variable,
+
+
+
+
+Stepwise refinement:
+
+The concept of method abstraction can be applied to the process of developing programs.
+When writing a large program, you can use the divide-and-conquer strategy, also known
+as stepwise refinement, to decompose it into subproblems. The subproblems can be further
+decomposed into smaller, more manageable problems.
+Stepwise refinement breaks a large problem into smaller manageable subproblems. Each subproblem
+can be implemented using a method. This approach makes the program easier to
+write, reuse, debug, test, modify, and maintain.
+
+
+
+
+Stub:
+
+You can use either a “top-down” or a “bottom-up” approach. The top-down approach
+implements one method in the structure chart at a time from the top to the bottom. Stubs—
+a simple but incomplete version of a method—can be used for the methods waiting to be
+implemented. The use of stubs enables you to quickly build the framework of the program.
+Implement the main method first, and then use a stub for the printMonth method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
