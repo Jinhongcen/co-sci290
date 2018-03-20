@@ -24,18 +24,23 @@ public class Lab9{
    int number = input.nextInt();
 
 	 // Report whether the integer is a palindrome.
-	 System.out.println(number + (isPalindrome(number) ? " is " : " is not ") +
+		if(isPalindrome(number)==true){
+	 System.out.println(number + " is "  +
 	 "a palindrome.");
+		}
+		else{
+			System.out.println(number + " is not " + "a palindrome.");
+		}
   }
   public static int reverse(int number){
-    String reverse = "";  // Holds reversed number
+    String r = "";  // Holds reversed number
 	  String n = number + ""; // Convert number to string
 	  // Reverse string
     System.out.println(n);
     for (int i = n.length() - 1; i >= 0; i--) {
-	  reverse += n.charAt(i);
+	  r = r+n.charAt(i);
 	 }
-	 return Integer.parseInt(reverse); // Return reversed integer
+	 return Integer.parseInt(r); // Return reversed integer
   }
   
   public static boolean isPalindrome(int number) {
