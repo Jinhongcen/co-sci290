@@ -20,7 +20,7 @@ public class Lab11{
       for(int j =0;j<n;j++){
         m++;
        int y =0 + (int)(Math.random()*(2-0));
-        System.out.print(y +" ");
+        System.out.print(y+" ");
         if(m==n){
           m=0;
           System.out.print("\n");
