@@ -23,6 +23,7 @@ public class Midterm{
     int[] w = new int[n*n];
     String str1;
     String str2;
+    while()
     for(int i =0;i<n;i++)
       for(int j =0;j<n;j++){
         if(m==0){
