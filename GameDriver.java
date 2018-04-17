@@ -50,12 +50,13 @@ public class GameDriver{
           younum = input.nextInt(); //get you number input 
       int mynum = 1 + (int)(Math.random()*(10-1));
     
-      if(younum>=11){  //number can't large than 10.
+      if(younum>=11 || younum <=0){  //number can't large than 10,less than 1.
         System.out.println("you choose a wrong number.choose again");
         younum = input.nextInt();
       }
     int m =0;
     while(m==0){
+      
       if(younum > mynum){
         k++;
         tool.readFile("Story3.txt");
@@ -74,9 +75,8 @@ public class GameDriver{
           System.exit(0);
         }
        }
-      }
-        else
-    {
+      }//end if
+     else{
       tool.readFile("Story1.txt");
          m=1;
           
@@ -84,5 +84,5 @@ public class GameDriver{
     }
                  }//end while
     
-   }
-}
+   }//end main
+}//end class
