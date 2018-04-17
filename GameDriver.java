@@ -27,125 +27,62 @@ public class GameDriver{
 
   //start of the application
   public static void main(String[] args){
-    
+    Utility tool = new Utility();
     //variable declarations with default values
     Scanner input = new Scanner(System.in); //initialize Scanner for user input
-
-    System.out.println("                 _____                _                 _      \n"
-                   +   "   /\\/\\  _   _  /__   \\___  __ _  ___| |__   ___ _ __  (_)___  \n"
-                   +   "  /    \\| | | |   / /\\/ _ \\/ _` |/ __| '_ \\ / _ \\ '__| | / __| \n"
-                   +   " / /\\/\\ \\ |_| |  / / |  __/ (_| | (__| | | |  __/ |    | \\__ \\ \n" 
-                   +   " \\/    \\/\\__, |  \\/   \\___|\\__,_|\\___|_| |_|\\___|_|    |_|___/ \n"
-                   +   "       |___/                                                   \n"
-                   +   "    ___                        ___ _       _          _        \n"
-                   +   "   / __\\ __ ___  _ __ ___     / _ \\ |_   _| |_ ___   / \\       \n" 
-                   +   "  / _\\| '__/ _ \\| '_ ` _ \\   / /_)/ | | | | __/ _ \\ /  /       \n"
-                   +   " / /  | | | (_) | | | | | | / ___/| | |_| | || (_) /\\_/        \n"
-                   +   " \\/   |_|  \\___/|_| |_| |_| \\/    |_|\\__,_|\\__\\___/\\/          \n");
-    
+    tool.readFile("Story.txt");
+    int k =3; //use to count when you win 5 time you win the game 
     //story setup
-    System.out.println("What is your name hero?");
-    String name =" ";
-    name = input.next();
-    System.out.println("Great,Do you want to have a adventure?yes or no.");
     String b=" ";
     b=input.next();
     if("yes".equals(b)){
-      System.out.println("Nice,I know you would choose the answer.OK ,let's start!");
+      tool.readFile("Story4.txt");
     }
     
     else
     {
-      System.out.println("Oh,i regret!");
-      System.out.println(" _______  _______  __   __  _______    _______  __   __  _______  ______    __  \n"
-                     + "|       ||   _   ||  |_|  ||       |  |       ||  | |  ||       ||    _ |  |  | \n"
-                     + "|    ___||  |_|  ||       ||    ___|  |   _   ||  |_|  ||    ___||   | ||  |  | \n"
-                     + "|   | __ |       ||       ||   |___   |  | |  ||       ||   |___ |   |_||_ |  | \n"
-                     + "|   ||  ||       ||       ||    ___|  |  |_|  ||       ||    ___||    __  ||__| \n"
-                     + "|   |_| ||   _   || ||_|| ||   |___   |       | |     | |   |___ |   |  | | __  \n"
-                     + "|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_||__| \n"
-                     + "  ___    ____                                                                   \n" 
-                     + " |   |  |    |                                                                  \n" 
-                     + " |___| |    _|                                                                  \n" 
-                     + "  ___  |   |                                                                    \n" 
-                     + " |   | |   |                                                                    \n" 
-                     + " |___| |   |_                                                                   \n" 
-                     + "        |____|                                                                  \n");
-      
+      tool.readFile("Story1.txt");
       System.exit(0);
     }
     
     
       int younum = 0;
-      System.out.println("Get one number you choose between 1 to 10. ");
-          younum = input.nextInt();
+          younum = input.nextInt(); //get you number input 
       int mynum = 1 + (int)(Math.random()*(10-1));
-      if(younum>=11){
+    
+      if(younum>=11){  //number can't large than 10.
         System.out.println("you choose a wrong number.choose again");
         younum = input.nextInt();
       }
     int m =0;
-      while(m==0){
-      if(younum > mynum)
-      {
-        System.out.println("Good!but now just start!choose one again,now ");
+    while(m==0){
+      if(younum > mynum){
+        k++;
+        tool.readFile("Story3.txt");
         younum = input.nextInt();
         
        if(younum < mynum) 
        {
-        System.out.println("Great!But I NOT believe you can win again. ");
-        younum = input.nextInt();
+       k++;
+       tool.readFile("Story3.txt");
+       younum = input.nextInt();
          
+       
+        if(k==7){
+          m=k;
+          tool.readFile("Story2.txt");
+          System.exit(0);
+        }
        }
+      }
         else
     {
-      System.out.println("Oh,i regret!You die!!");
-      System.out.println(" _______  _______  __   __  _______    _______  __   __  _______  ______    __  \n"
-                      + "|       ||   _   ||  |_|  ||       |  |       ||  | |  ||       ||    _ |  |  | \n"
-                      + "|    ___||  |_|  ||       ||    ___|  |   _   ||  |_|  ||    ___||   | ||  |  | \n"
-                      + "|   | __ |       ||       ||   |___   |  | |  ||       ||   |___ |   |_||_ |  | \n"
-                      + "|   ||  ||       ||       ||    ___|  |  |_|  ||       ||    ___||    __  ||__| \n"
-                      + "|   |_| ||   _   || ||_|| ||   |___   |       | |     | |   |___ |   |  | | __  \n"
-                      + "|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_||__| \n"
-                      + "  ___    ____                                                                   \n" 
-                      + " |   |  |    |                                                                  \n" 
-                      + " |___| |    _|                                                                  \n" 
-                      + "  ___  |   |                                                                    \n" 
-                      + " |   | |   |                                                                    \n" 
-                      + " |___| |   |_                                                                   \n" 
-                      + "        |____|                                                                  \n");
+      tool.readFile("Story1.txt");
          m=1;
+          
           System.exit(0);
     }
-        
-        
-        
-        
-        
-      }
-      
-       else
-    {
-      System.out.println("Oh,i regret!You die!!");
-      System.out.println(" _______  _______  __   __  _______    _______  __   __  _______  ______    __  \n"
-                      + "|       ||   _   ||  |_|  ||       |  |       ||  | |  ||       ||    _ |  |  | \n"
-                      + "|    ___||  |_|  ||       ||    ___|  |   _   ||  |_|  ||    ___||   | ||  |  | \n"
-                      + "|   | __ |       ||       ||   |___   |  | |  ||       ||   |___ |   |_||_ |  | \n"
-                      + "|   ||  ||       ||       ||    ___|  |  |_|  ||       ||    ___||    __  ||__| \n"
-                      + "|   |_| ||   _   || ||_|| ||   |___   |       | |     | |   |___ |   |  | | __  \n"
-                      + "|_______||__| |__||_|   |_||_______|  |_______|  |___|  |_______||___|  |_||__| \n"
-                      + "  ___    ____                                                                   \n" 
-                      + " |   |  |    |                                                                  \n" 
-                      + " |___| |    _|                                                                  \n" 
-                      + "  ___  |   |                                                                    \n" 
-                      + " |   | |   |                                                                    \n" 
-                      + " |___| |   |_                                                                   \n" 
-                      + "        |____|                                                                  \n");
-         m=1;
-    }
-   
-   
-         }
+                 }//end while
     
    }
 }
