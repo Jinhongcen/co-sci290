@@ -34,7 +34,7 @@ public class GameDriver{
     
     Scanner input = new Scanner(System.in); //initialize Scanner for user input
     
-    write.testwrite();//save name in testWriting.txt
+    tool.testwrite("testWriting.txt");//save name in testWriting.txt
     
     tool.readFile("Story.txt");//readFile
     
