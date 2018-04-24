@@ -46,13 +46,13 @@ public class GameDriver{
     b=input.next();
     
     if("yes".equals(b)){
-      
+      tool.readFile("testWriting.txt");
       tool.readFile("Story4.txt");
       
     }
     
     else{
-      
+      tool.readFile("testWriting.txt");
       tool.readFile("Story1.txt");
       System.exit(0);
       
@@ -66,8 +66,8 @@ public class GameDriver{
       int mynum = 1 + (int)(Math.random()*(10-1));
     
       if(younum>=11 || younum <=0){  //number can't large than 10,less than 1.
-        
-        System.out.println("you choose a wrong number.choose again");
+        tool.readFile("testWriting.txt");
+        System.out.println(" you choose a wrong number.choose again");
         younum = input.nextInt();
         
       }
@@ -76,24 +76,28 @@ public class GameDriver{
       
       if(younum > mynum){
         k++;
+        tool.readFile("testWriting.txt");
         tool.readFile("Story3.txt");
         younum = input.nextInt();
         
        if(younum < mynum) 
        {
        k++;
+       tool.readFile("testWriting.txt");
        tool.readFile("Story3.txt");
        younum = input.nextInt();
          
        
         if(k==7){
           m=k;
+          tool.readFile("testWriting.txt");
           tool.readFile("Story2.txt");
           System.exit(0);
         }
        }
       }//end if
      else{
+       tool.readFile("testWriting.txt");
       tool.readFile("Story1.txt");
          m=1;
           
