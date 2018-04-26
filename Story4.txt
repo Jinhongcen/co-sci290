@@ -1,3 +1,7 @@
-Nice,I know you would choose the answer.
-OK ,let's start!
-Get one number you choose between 1 to 10.
+Nice,I know you would choose the answer.OK ,let's start!
+
+Now, you face to the monster ,guess a number if you have a good 
+luck ,you will get a strong weapon and you are hurt the monster,
+if you hurt the monster 6 times you will win the game.
+
+input you number 1-10!!

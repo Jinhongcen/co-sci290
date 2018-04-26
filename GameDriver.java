@@ -35,70 +35,63 @@ public class GameDriver{
     Scanner input = new Scanner(System.in); //initialize Scanner for user input
     
     tool.testwrite("testWriting.txt");//save name in testWriting.txt
-    
+    tool.readFile("testWriting.txt");//read stroy line
     tool.readFile("Story.txt");//readFile
     
    
-    int k =3; //use to count when you win 5 time you win the game 
+    int k =2; //use to count when you win 5 time you win the game 
     //story setup
     String b=" ";
     
     b=input.next();
     
-    if("yes".equals(b)){
-      tool.readFile("testWriting.txt");
-      tool.readFile("Story4.txt");
+    if("yes".equals(b)){  
+      tool.readFile("testWriting.txt");//read stroy line
+      tool.readFile("Story4.txt");//read stroy line
       
     }
     
-    else{
-      tool.readFile("testWriting.txt");
-      tool.readFile("Story1.txt");
+    else{    
+      tool.readFile("testWriting.txt");//read stroy line
+      tool.readFile("Story1.txt");//read stroy line
       System.exit(0);
       
     }
     
+    int younum = 0;
+    int m =0;// for while condition
     
-      int younum = 0;
-    
-          younum = input.nextInt(); //get you number input 
-    
-      int mynum = 1 + (int)(Math.random()*(10-1));
-    
-      if(younum>=11 || younum <=0){  //number can't large than 10,less than 1.
-        tool.readFile("testWriting.txt");
-        System.out.println(" you choose a wrong number.choose again");
-        younum = input.nextInt();
-        
-      }
-    int m =0;
     while(m==0){
-      
+      int mynum = 1 + (int)(Math.random()*(10-1));
+      younum = input.nextInt(); //get you number input 
+      younum = tool.Ifwrongnumber(younum);
       if(younum > mynum){
         k++;
-        tool.readFile("testWriting.txt");
-        tool.readFile("Story3.txt");
-        younum = input.nextInt();
         
-       if(younum < mynum) 
-       {
-       k++;
-       tool.readFile("testWriting.txt");
-       tool.readFile("Story3.txt");
-       younum = input.nextInt();
+        tool.readFile("testWriting.txt");//read stroy line
+        tool.monsterlife(k);//test monster suitation
+        mynum = 1 + (int)(Math.random()*(10-1));
+        younum = input.nextInt(); //get you number input 
+        younum = tool.Ifwrongnumber(younum);
+       if(younum < mynum){
+         k++;
          
-       
-        if(k==7){
+         tool.readFile("testWriting.txt");//read stroy line
+        
+         tool.monsterlife(k);//test monster suitation         
+       }
+        if(k==8){// when win 6 time , will come here
           m=k;
-          tool.readFile("testWriting.txt");
-          tool.readFile("Story2.txt");
+          tool.readFile("testWriting.txt");//read stroy line
+          tool.readFile("Story2.txt");//read stroy line
+          tool.testwrite1("Winner.txt");//save for winner
           System.exit(0);
         }
-       }
+       
       }//end if
-     else{
-       tool.readFile("testWriting.txt");
-      tool.readFile("Story1.txt");
+     else{       //if lose ,game over!
+       tool.readFile("testWriting.txt");//read stroy line
+       tool.readFile("Story1.txt");//read stroy line
          m=1;
           
           System.exit(0);
