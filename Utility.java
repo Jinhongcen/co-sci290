@@ -82,7 +82,7 @@ public class Utility{
   public int Ifwrongnumber(int wr){
     Scanner input = new Scanner(System.in); //initialize Scanner for user input
   if(wr>=11 || wr <=0){  //number can't large than 10,less than 1.
-        System.out.println("you choose a wrong number.choose again");
+        System.out.println("you choose a wrong number.choose again 1-10");
         wr = input.nextInt();
         return wr;
     
