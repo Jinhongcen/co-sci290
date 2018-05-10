@@ -51,6 +51,7 @@ public class Quiz2{
       if(x[re]%2==1){
         o++;
       }
+    }
       
      for(int i=0;i<z.length;i++){
       if(z[i]%2==1){
@@ -59,7 +60,7 @@ public class Quiz2{
      }
     
     return o;
-  }
+  
   }
     public static int[] getodd(int[] odds,int[] even,int p){
       int o=0;
@@ -74,8 +75,9 @@ public class Quiz2{
         qw[i+o]=even[i];
         
       }
+      }
     return qw;
-  }
+  
     }
   
   public static int couteven(int[] s,int[] ki){
