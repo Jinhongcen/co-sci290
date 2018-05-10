@@ -19,7 +19,7 @@ public class Lab18{
   a=min(myList);
     System.out.println("The smallest element is "+a);
   }
-  public static double min(double[] array){
+  public static double min(double[] array){   //a method that finds the smallest element in an array of double values
   double b;
   b=array[0];
   for(int i=1;i<array.length;i++)
