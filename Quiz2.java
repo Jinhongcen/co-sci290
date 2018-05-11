@@ -26,12 +26,20 @@ public class Quiz2{
     m = couteven(a,b);
     int[] odd = new int[n];
     int[] even = new int[m];
+    System.out.println("First arrays is ");
+    for(int i=0;i<a.length;i++)
+      System.out.print(a[i]+" ");
+    System.out.println("\nScrond arrays is ");
+    for(int i=0;i<b.length;i++)
+      System.out.print(b[i]+" ");
+    System.out.println("\nTwo arrays has "+ n +" odd numbers and have "+ m +" even numbers.");
     odd = getodd(a,b,n);
     even = geteven(a,b,m);
-    System.out.println("Two arrays has "+ n +"odd numbers and have "+ m+" even numbers.");
+    System.out.println("Odd numbers is ");
     for(int i=0;i<odd.length;i++){
       System.out.print(odd[i]+" ");
     }
+    System.out.println("\nEven numbers is ");
     for(int i=0;i<even.length;i++){
       System.out.print(even[i]+" ");
     }
@@ -65,14 +73,16 @@ public class Quiz2{
     public static int[] getodd(int[] odds,int[] even,int p){
       int o=0;
     int[] qw =new int[p];
-    for(int i=0;i<odds.length;i++)
+    for(int i=0;i<odds.length;i++){
+     
       if(odds[i]%2==1){
-        qw[i]=odds[i];
-        o++;
+        qw[o++]=odds[i];
+        
       }
+    }
       for(int i=0;i<even.length;i++){
         if(even[i]%2==1){
-        qw[i+o]=even[i];
+        qw[o++]=even[i];
         
       }
       }
@@ -97,14 +107,16 @@ public class Quiz2{
       public static int[] geteven(int[] odds,int[] even,int p){
         int o=0;
     int[] qq =new int[p];
-    for(int i=0;i<odds.length;i++)
+    for(int i=0;i<odds.length;i++){
+     
       if(odds[i]%2==0){
-        qq[i]=odds[i];
-        o++;
+        qq[o++]=odds[i];
+        
       }
+    }
       for(int i=0;i<even.length;i++){
         if(even[i]%2==0){
-        qq[i+o]=even[i];
+        qq[o++]=even[i];
         
       }
       }
