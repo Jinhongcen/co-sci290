@@ -9,6 +9,7 @@
 class Lab20{
   public static void main(String[] args){
     int [][] array = new int [5][6];
+    int [] s = new int [5];
     for(int i =0;i<array.length;i++)//row
       for(int j=0;j<array[i].length;j++){//columns
         int mynum = 1 + (int)(Math.random()*(100-1));
@@ -21,22 +22,24 @@ class Lab20{
             System.out.println("\n");  
         } //println the array 
       
-   System.out.println(sum(array));//println the sum
-       
+       s = sum(array);//get the sum
+       for(int i = 0 ;i < s.length; i++){
+         System.out.println("array the sum of " +(i+1) +" row "+"is "+ s[i]);
+       }
     
   }//end main
   
-  public static String sum(int a[][]){
-    String sums = "";
+  public static int[] sum(int a[][]){
+    
+    int [] b = new int [a.length] ;
      for(int i =0;i<a.length;i++){
        int sum=0;
       for(int j=0;j<a[i].length;j++){
        sum += a[i][j];
         } 
-       sums = sums + sum + " ";
-       System.out.println("array the sum of " +(i+1) +" row "+"is "+sum);//println the sum
+       b[i]=sum;
      }
-    return sums;//return sums
+    return b;//return sums
   }//end function
   
   
