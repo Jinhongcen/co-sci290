@@ -18,6 +18,7 @@ public class Lab22{
                             {' ', ' ', ' ', ' ', ' ', ' '},
                             {' ', ' ', ' ', ' ', ' ', ' '},
                           };
+  static int noWinner = 0;
   static char xo = 'x'; //holds which player is currently playing
   static boolean gameOver = false; //ends the loop if there is a winner
     
@@ -29,11 +30,18 @@ public class Lab22{
     int row = 0;
     int col = 0;
     
+    
     System.out.println("Let's play Tic Tac Toe!");
        
     //while there isn't a winner
     while(!gameOver){
       printBoard();
+      
+      if(noWinner == 36){
+        gameOver = true;
+        System.out.println("no winner!!");
+        break;
+      }
       System.out.println("It is " + xo + "'s turn. Please enter 0, 1, 2, 3, 4, 5 for row");
       row = input.nextInt();
       System.out.println("Please enter 0, 1, 2, 3, 4, 5 for col");
@@ -99,6 +107,7 @@ public class Lab22{
   public static void move(int row, int col){
     if(board[row][col]==' '){
     board[row][col]=xo;
+      nowinner++;
     }
     else{
       System.out.println("You put in wrong row and col,try again");

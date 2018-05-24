@@ -16,6 +16,7 @@ public class Lab21TicTacToe{
                             {' ', ' ', ' '},
                             {' ', ' ', ' '}
                           };
+  static int nowinner = 0;//cout 
   static char xo = 'x'; //holds which player is currently playing
   static boolean gameOver = false; //ends the loop if there is a winner
     
@@ -32,18 +33,26 @@ public class Lab21TicTacToe{
     //while there isn't a winner
     while(!gameOver){
       printBoard();
+      
+      if(nowinner == 9){
+        gameOver = true;
+        System.out.println("no winner!!");
+        break;
+      }
       System.out.println("It is " + xo + "'s turn. Please enter 0, 1, 2 for row");
       row = input.nextInt();
       System.out.println("Please enter 0, 1, 2 for col");
       col = input.nextInt();
       move(row, col);
       changeXO();
+      
       if(checkWinner()){
         gameOver = true;
         printBoard();
         changeXO();
         System.out.println("Winner is " + xo );
       }
+      
     }
     
   }//end of main method
@@ -97,6 +106,7 @@ public class Lab21TicTacToe{
   public static void move(int row, int col){
     if(board[row][col]==' '){
     board[row][col]=xo;
+      nowinner++;
     }
     else{
       System.out.println("You put in wrong row and col,try again");
