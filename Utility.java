@@ -81,8 +81,8 @@ public class Utility{
 	}
   public int Ifwrongnumber(int wr){
     Scanner input = new Scanner(System.in); //initialize Scanner for user input
-  if(wr>=11 || wr <=0){  //number can't large than 10,less than 1.
-        System.out.println("you choose a wrong number.choose again 1-10");
+  if(wr>=3 || wr <=0){  //number can't large than 10,less than 1.
+        System.out.println("you choose a wrong number.choose again 1,2");
         wr = input.nextInt();
         return wr;
     
@@ -91,21 +91,21 @@ public class Utility{
         
       }
   public void monsterlife(int hurt){
-    if(hurt == 3){
-      System.out.println("You just drop monster " +  "10% " + "blood!\nJust star" );
+    if(hurt == 1){
+      System.out.println("You just drop monster " +  "10% " + "blood!\nJust star,choose again 1,2" );
+    }
+    else if(hurt == 2){
+      System.out.println("You  drop monster " + "20% " + "blood! Come on,monster still have 70% life" );
+      System.out.println("You've killed half the blood, but unfortunately,it's not enough choose again 1,2.");
+    }
+    else if(hurt == 3){
+    System.out.println("You just drop monster " +  "20% " + "blood! \n\nohhhh~~~near victory choose again 1,2!" );
     }
     else if(hurt == 4){
-      System.out.println("You  drop monster " + "20% " + "blood! Come on,monster still have 70% life" );
-      System.out.println("You've killed half the blood, but unfortunately,it's not enough.");
+    System.out.println("You just drop monster " +  "10% " + "blood! \n\nNow monter only have 40% blood,but he goes into a frenzy! ,Come on guychoose again 1,2!" );
     }
     else if(hurt == 5){
-    System.out.println("You just drop monster " +  "20% " + "blood! \n\nohhhh~~~near victory!" );
-    }
-    else if(hurt == 6){
-    System.out.println("You just drop monster " +  "10% " + "blood! \n\nNow monter only have 40% blood,but he goes into a frenzy!Come on guy!" );
-    }
-    else if(hurt == 7){
-    System.out.println("You drop monster " + "10% " + "blood! \n\nLet's give him a final blow!" );
+    System.out.println("You drop monster " + "10% " + "blood! \n\nLet's give him a final blow choose again 1,2!" );
     }
     else{
     System.out.println("You  drop monster final blood! \n\n You save the world,you are hero!" );

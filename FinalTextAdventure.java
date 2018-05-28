@@ -23,7 +23,7 @@
 import java.util.Scanner;
 
 //Demo HW1 
-public class GameDriver{
+public class FinalTextAdventure{
 
   //start of the application
   public static void main(String[] args){
